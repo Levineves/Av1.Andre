@@ -146,3 +146,4 @@ while True:
     if jogar_denovo != "S":
         print("\nObrigado por jogar! Até a próxima.")
         break
+    
