@@ -1,6 +1,4 @@
-
-
-palavra = "python"
+from palavrasecreta import palavra
 
 letras_jogador = []
 chances = 7
