@@ -1,1 +1,2 @@
-palavra = "computador"
+#List com algumas palavras para o jogo escolher uma de forma aleatoria
+palavra = ["desenvolvimento", "python", "computador", "engenharia", "tecnologia", "programacao", "inteligencia", "teclado", "monitor", "dados", "analise", "sistemas", "software", "hardware", "rede", "internet", "seguranca", "criptografia", "algoritmo", "matematica"]
