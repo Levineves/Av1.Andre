@@ -1,4 +1,4 @@
-import  random
+import random
 
 # Códigos de cores para o terminal
 VERMELHO = "\033[91m"
@@ -10,9 +10,10 @@ NEGRITO = "\033[1m"
 FUNDO_DESTACADO = "\033[47;30;1m"
 RESET = "\033[0m"
 
-from palavrasecreta import palavra
+from palavrasecreta import palavra as lista_palavras
+
 #List com algumas palavras para o jogo escolher uma de forma aleatoria do palavrasecreta.py
-palavra = random.choice(palavra)
+palavra = random.choice(lista_palavras)
 
 letras_jogador = []
 chances = 7
@@ -90,13 +91,13 @@ while True:
     for letra in palavra:
         if letra.lower() in letras_jogador:
             print(f"{FUNDO_DESTACADO} {letra.upper()} {RESET}", end=" ")
-
         else:
             print("_", end = " ")
     print("")
     print("")
 
     Tentativa = input("Digite uma letra: ")
+
     #3. Verifica se o usuario digitou algo invalido ou uma letra repetida
     if len(Tentativa) != 1 or not Tentativa.isalpha():
         print(f"{VERMELHO}Ops! Por favor, digite apenas UMA letra.{RESET}")
@@ -121,7 +122,6 @@ while True:
     for letra in palavra:
         if letra.lower() not in letras_jogador:
             ganhou = False
-            
 
     if chances == 0 or ganhou:
         break
@@ -131,5 +131,5 @@ print("")
 if ganhou:
     print(f"{VERDE}PARABÉNS, VOCE GANHOU! A PALAVRA ERA: {palavra}{RESET}")
 else:
-    print(boneco[7 - chances])
+    print(boneco[7])
     print(f"{VERMELHO}VOCÊ PERDEU! A PALAVRA ERA: {palavra}{RESET}")
